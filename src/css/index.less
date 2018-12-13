@@ -1,0 +1,42 @@
+@import "../../node_modules/reset-css/reset.css";
+@import "./clearfix";
+#wrap{
+  width: 100%;
+  .header{
+    width: 100%;
+    .header-top{
+      width:1200px;
+      margin: 0 auto;
+      background-color: #f1f1f1;
+      .clearFix();
+      .city{
+        float:left;
+        line-height: 40px;
+        img{
+          width:20px;
+        }
+        .city-name{
+          font-weight: bold;
+          margin-right: 5px;
+
+        }
+        .switch-city{
+          color:#898989;
+          font-weight: bold;
+        }
+      }
+      .nav{
+        float : right;
+        .item{
+          float:left;
+          height:40px;
+          line-height: 40px;
+          font-weight: bold;
+          &.active{
+            color:#e94840;
+          }
+        }
+      }
+    }
+  }
+}

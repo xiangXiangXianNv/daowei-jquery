@@ -1,0 +1,12 @@
+.clearFix::after {
+  content: '';
+  display: block;
+  clear: both;
+  zoom: 1;
+}
+.clearFix::before {
+  content: '';
+  display: block;
+  clear: both;
+  zoom: 1;
+}

@@ -1,0 +1,63 @@
+@import "../../node_modules/reset-css/reset.css";
+.clearFix::after {
+  content: '';
+  display: block;
+  clear: both;
+  zoom: 1;
+}
+.clearFix::before {
+  content: '';
+  display: block;
+  clear: both;
+  zoom: 1;
+}
+#wrap {
+  width: 100%;
+}
+#wrap .header {
+  width: 100%;
+}
+#wrap .header .header-top {
+  width: 1200px;
+  margin: 0 auto;
+  background-color: #f1f1f1;
+}
+#wrap .header .header-top::after {
+  content: '';
+  display: block;
+  clear: both;
+  zoom: 1;
+}
+#wrap .header .header-top::before {
+  content: '';
+  display: block;
+  clear: both;
+  zoom: 1;
+}
+#wrap .header .header-top .city {
+  float: left;
+  line-height: 40px;
+}
+#wrap .header .header-top .city img {
+  width: 20px;
+}
+#wrap .header .header-top .city .city-name {
+  font-weight: bold;
+  margin-right: 5px;
+}
+#wrap .header .header-top .city .switch-city {
+  color: #898989;
+  font-weight: bold;
+}
+#wrap .header .header-top .nav {
+  float: right;
+}
+#wrap .header .header-top .nav .item {
+  float: left;
+  height: 40px;
+  line-height: 40px;
+  font-weight: bold;
+}
+#wrap .header .header-top .nav .item.active {
+  color: #e94840;
+}
