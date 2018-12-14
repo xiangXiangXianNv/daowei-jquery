@@ -1,0 +1,325 @@
+.clearFix::after {
+  content: '';
+  display: block;
+  clear: both;
+  zoom: 1;
+}
+.clearFix::before {
+  content: '';
+  display: block;
+  clear: both;
+  zoom: 1;
+}
+#wrap {
+  width: 100%;
+}
+#wrap .header {
+  width: 100%;
+  background-color: #f1f1f1;
+  top: 0;
+  transition: all 0.3s;
+  transform: rotateX(0deg);
+  transform-origin: 50% 0;
+}
+#wrap .header.fixed {
+  position: fixed;
+  left: 0;
+  z-index: 3;
+}
+#wrap .header .header-top {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+#wrap .header .header-top::after {
+  content: '';
+  display: block;
+  clear: both;
+  zoom: 1;
+}
+#wrap .header .header-top::before {
+  content: '';
+  display: block;
+  clear: both;
+  zoom: 1;
+}
+#wrap .header .header-top .city {
+  float: left;
+  line-height: 40px;
+}
+#wrap .header .header-top .city img {
+  width: 20px;
+  vertical-align: middle;
+}
+#wrap .header .header-top .city .city-name {
+  font-weight: bold;
+  margin-right: 5px;
+}
+#wrap .header .header-top .city .switch-city {
+  color: #898989;
+  font-weight: bold;
+}
+#wrap .header .header-top .nav {
+  float: right;
+}
+#wrap .header .header-top .nav .item {
+  float: left;
+}
+#wrap .header .header-top .nav .item a {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 0 15px;
+  box-sizing: border-box;
+  color: black;
+}
+#wrap .header .header-top .nav .item:last-child {
+  margin-right: 0;
+}
+#wrap .header .header-search {
+  transition: transform 1s;
+  background-color: #ffffff;
+  width: 100%;
+}
+#wrap .header .header-search .search-wrap {
+  position: relative;
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+#wrap .header .header-search .search-wrap::after {
+  content: '';
+  display: block;
+  clear: both;
+  zoom: 1;
+}
+#wrap .header .header-search .search-wrap::before {
+  content: '';
+  display: block;
+  clear: both;
+  zoom: 1;
+}
+#wrap .header .header-search .search-wrap .nav-bar {
+  width: 280px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+}
+#wrap .header .header-search .search-wrap .nav-bar .navbar-brand {
+  width: 100%;
+  height: 65px;
+  line-height: 29px;
+}
+#wrap .header .header-search .search-wrap .nav-bar .navbar-brand img {
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+  margin-top: 8px;
+  display: block;
+}
+#wrap .header .header-search .search-wrap .search-content {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 100px;
+  right: 0;
+  width: 600px;
+  margin: auto;
+  height: 35px;
+  line-height: 34px;
+  border: 2px solid #e94840;
+  background-color: #fff;
+  border-radius: 4px;
+  font-size: 14px;
+}
+#wrap .header .header-search .search-wrap .search-content .icon {
+  display: inline-block;
+  font-weight: 400;
+  position: relative;
+  left: 20px;
+  top: 1px;
+}
+#wrap .header .header-search .search-wrap .search-content input {
+  width: 70%;
+  border: none;
+  height: 30px;
+  outline: none;
+  padding-left: 30px;
+}
+#wrap .header .header-search .search-wrap .search-content .service {
+  width: 20%;
+  text-align: center;
+  background-color: #e94840;
+  color: #fff;
+  float: right;
+  height: 35px;
+  cursor: pointer;
+}
+#wrap .header .header-search .search-wrap .erwei {
+  position: absolute;
+  right: 18px;
+  top: 0;
+}
+#wrap .header .header-search .search-wrap .erwei .icon {
+  border: 1px solid #ccc;
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  top: -5px;
+  left: 40px;
+  background: #fff;
+  transform: rotateZ(45deg);
+}
+#wrap .header .header-search .search-wrap .erwei img {
+  width: 90px;
+  border: 1px solid #ccc;
+  position: relative;
+  z-index: 1;
+}
+#wrap .baozhang {
+  width: 100%;
+  padding-top: 60px;
+  box-sizing: border-box;
+  text-align: center;
+  background-color: white;
+}
+#wrap .baozhang .service-b {
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+#wrap .baozhang .service-b span {
+  font-weight: bold;
+  color: #fb474f;
+}
+#wrap .baozhang .service-c {
+  font-size: 22px;
+  color: #3d3838;
+}
+#wrap .baozhang .servi {
+  width: 100%;
+  padding-top: 20px;
+  background: #fff;
+  height: 66px;
+  font-family: "微软雅黑";
+}
+#wrap .baozhang .servi > ul {
+  width: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0 auto;
+}
+#wrap .baozhang .servi > ul > li {
+  font-size: 18px;
+  text-align: center;
+  color: #1d1515;
+}
+#wrap .baozhang .servi > ul > li > img {
+  position: relative;
+  top: 3px;
+}
+#wrap .footer-wrap {
+  width: 100%;
+  background-color: white;
+}
+#wrap .footer-wrap .footer {
+  clear: both;
+  padding-top: 50px;
+  box-sizing: border-box;
+  height: 170px;
+  background: #fff;
+  width: 1200px;
+  margin: 0 auto;
+}
+#wrap .footer-wrap .footer::after {
+  content: '';
+  display: block;
+  clear: both;
+  zoom: 1;
+}
+#wrap .footer-wrap .footer::before {
+  content: '';
+  display: block;
+  clear: both;
+  zoom: 1;
+}
+#wrap .footer-wrap .footer h2 {
+  font-size: 18px;
+  float: left;
+  font-weight: 700;
+}
+#wrap .footer-wrap .footer .cities {
+  margin-left: 30px;
+  width: 1090px;
+  line-height: 30px;
+  float: left;
+}
+#wrap .footer-wrap .footer .cities a {
+  font-size: 16px;
+  color: #898989;
+  display: inline-block;
+  width: 8%;
+  text-align: center;
+  font-weight: 200;
+  cursor: pointer;
+}
+#wrap .hezuo {
+  width: 100%;
+  box-sizing: border-box;
+  padding-top: 30px;
+  background-color: #fbf8f8;
+}
+#wrap .hezuo .hezuo-content {
+  width: 1200px;
+  margin: 0 auto;
+}
+#wrap .hezuo .hezuo-content .hezuo-text {
+  text-align: left;
+  font-weight: bold;
+  width: 1200px;
+  background: none;
+  color: #1d1515;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+#wrap .hezuo .hezuo-content > ul {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#wrap .hezuo .hezuo-content > ul > li {
+  width: 10%;
+  height: 60px;
+  text-align: center;
+  background: #fff;
+  margin-left: 1%;
+  line-height: 55px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+#wrap .end {
+  position: relative;
+  top: -20px;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  background-color: #fbf8f8;
+}
+#wrap .end > p {
+  width: 1200px;
+  margin: 0 auto;
+  padding-left: 10px;
+  box-sizing: border-box;
+  color: #898989;
+  font-size: 14px;
+}

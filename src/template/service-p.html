@@ -1,0 +1,21 @@
+{{each service as value index}}
+<div class="row">
+    <a href="item.html">
+        <div class="col">
+            <img src={{value.imgUrl}} alt="">
+            <div class="desc">
+                <img src='src/images/home1.png' alt="">
+                <p>{{value.title}}</p>
+            </div>
+            <div class="detail">
+                <div class="dan">
+                    已接单<span>{{value.orderCount}}</span>单
+                </div>
+                <div class="good-rep">
+                    好评<span>{{value.positiveRate}}</span>
+                </div>
+            </div>
+        </div>
+    </a>
+</div>
+{{/each}}

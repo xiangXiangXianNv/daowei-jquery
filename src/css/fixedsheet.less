@@ -1,0 +1,283 @@
+@import "./clearfix";
+#wrap{
+  width: 100%;
+  .header{
+    width: 100%;
+    background-color: #f1f1f1;
+    top:0;
+    transition: all 0.3s;
+    transform: rotateX(0deg);
+    transform-origin: 50% 0;
+    &.fixed{
+      position: fixed;
+      left: 0;
+      z-index: 3;
+    }
+    .header-top{
+      width:1200px;
+      margin: 0 auto;
+      padding: 0 15px;
+      box-sizing: border-box;
+      .clearFix();
+      .city{
+        float:left;
+        line-height: 40px;
+        img{
+          width:20px;
+          vertical-align:middle;
+        }
+        .city-name{
+          font-weight: bold;
+          margin-right: 5px;
+
+        }
+        .switch-city{
+          color:#898989;
+          font-weight: bold;
+        }
+      }
+      .nav{
+        float : right;
+        .item{
+          float:left;
+          a{
+            display: block;
+            height:40px;
+            line-height: 40px;
+            font-weight: bold;
+            text-decoration: none;
+            padding:0 15px;
+            box-sizing: border-box;
+            color:black;
+          }
+          &:last-child{
+            margin-right: 0;
+          }
+        }
+      }
+    }
+    .header-search{
+      transition: transform 1s;
+      background-color: rgb(255, 255, 255);
+      width: 100%;
+      .search-wrap{
+        .clearFix();
+        position: relative;
+        width:1200px;
+        margin: 0 auto;
+        padding: 0 15px;
+        box-sizing: border-box;
+        .nav-bar{
+          width:280px;
+          height: 90px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          float: left;
+          .navbar-brand{
+            width:100%;
+            height:65px;
+            line-height: 29px;
+            img{
+              width:100%;
+              height:auto;
+              vertical-align: middle;
+              margin-top: 8px;
+              display: block;
+            }
+          }
+        }
+        .search-content{
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 100px;
+          right: 0;
+          width: 600px;
+          margin: auto;
+          height: 35px;
+          line-height: 34px;
+          border: 2px solid #e94840;
+          background-color: #fff;
+          border-radius: 4px;
+          font-size: 14px;
+          .icon{
+            display: inline-block;
+            font-weight: 400;
+            position: relative;
+            left: 20px;
+            top:1px;
+          }
+          input{
+            width: 70%;
+            border: none;
+            height: 30px;
+            outline: none;
+            padding-left: 30px
+          }
+          .service{
+            width: 20%;
+            text-align: center;
+            background-color: #e94840;
+            color: #fff;
+            float: right;
+            height: 35px;
+            cursor: pointer;
+          }
+        }
+        .erwei{
+          position: absolute;
+          right: 18px;
+          top: 0;
+          .icon{
+            border: 1px solid #ccc;
+            width: 12px;
+            height: 12px;
+            position: absolute;
+            top: -5px;
+            left: 40px;
+            background: #fff;
+            transform: rotateZ(45deg);
+          }
+          img{
+            width:90px;
+            border:1px solid #ccc;
+            position: relative;
+            z-index: 1;
+          }
+        }
+      }
+    }
+  }
+  .baozhang{
+    width:100%;
+    padding-top: 60px;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: white;
+    .service-b{
+      font-size: 30px;
+      font-weight: bold;
+      margin-top: 20px;
+      margin-bottom: 10px;
+      span{
+        font-weight: bold;
+        color:#fb474f;
+      }
+    }
+    .service-c{
+      font-size: 22px;
+      color:#3d3838;
+    }
+    .servi{
+      width: 100%;
+      padding-top: 20px;
+      background: #fff;
+      height: 66px;
+      font-family: "微软雅黑";
+      >ul{
+        width:420px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin: 0 auto;
+        >li{
+          font-size: 18px;
+          text-align: center;
+          color:#1d1515;
+          >img{
+            position: relative;
+            top:3px;
+          }
+        }
+      }
+    }
+  }
+  .footer-wrap{
+    width:100%;
+    background-color: white;
+    .footer{
+      .clearFix();
+      clear: both;
+      padding-top: 50px;
+      box-sizing: border-box;
+      height: 170px;
+      background: #fff;
+      width: 1200px;
+      margin: 0 auto;
+      h2{
+        font-size: 18px;
+        float: left;
+        font-weight: 700;
+      }
+      .cities{
+        margin-left: 30px;
+        width: 1090px;
+        line-height: 30px;
+        float: left;
+        a{
+          font-size: 16px;
+          color: #898989;
+          display: inline-block;
+          width: 8%;
+          text-align: center;
+          font-weight: 200;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .hezuo{
+    width:100%;
+    box-sizing: border-box;
+    padding-top: 30px;
+    background-color: rgb(251,248,248);
+    .hezuo-content{
+      width:1200px;
+      margin: 0 auto;
+      .hezuo-text{
+        text-align: left;
+        font-weight: bold;
+        width: 1200px;
+        background: none;
+        color: #1d1515;
+        font-size: 18px;
+        margin-bottom: 20px;
+      }
+      >ul{
+        width:100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        >li{
+          width: 10%;
+          height: 60px;
+          text-align: center;
+          background: #fff;
+          margin-left: 1%;
+          line-height: 55px;
+          cursor: pointer;
+          margin-bottom: 20px;
+        }
+      }
+    }
+
+  }
+  .end{
+    position: relative;
+    top:-20px;
+    width: 100%;
+    height:40px;
+    line-height: 40px;
+    background-color: rgb(251,248,248);
+    >p{
+      width:1200px;
+      margin: 0 auto;
+      padding-left:10px;
+      box-sizing: border-box;
+      color:#898989;
+      font-size: 14px;
+    }
+  }
+}

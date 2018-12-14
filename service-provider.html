@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <title>到位</title>
-    <link rel="stylesheet" href="./src/css/index.css">
+    <link rel="stylesheet" href="./src/css/provider.css">
     <link rel="stylesheet" href="./src/css/fixedsheet.css">
     <!--重置css-->
     <link rel="stylesheet" href="./src/css/reset.css">
@@ -28,14 +28,14 @@
                 <span class="switch-city">[切换城市]</span>
             </div>
             <ul class="nav">
-                <li class='item active'>
-                    <a href="javascript:;">首页</a>
+                <li class='item'>
+                    <a href="index.html">首页</a>
                 </li>
                 <li class='item'>
                     <a href="javascript:;">关于我们</a>
                 </li>
-                <li class='item'>
-                    <a href="service-provider.html">服务商</a>
+                <li class='item active'>
+                    <a href="javascript:;">服务商</a>
                 </li>
                 <li class='item'>
                     <a href="javascript:;">商家入驻</a>
@@ -49,46 +49,54 @@
             </ul>
         </div>
         <div class="header-search">
-           <div class="search-wrap">
-               <div class="nav-bar">
-                   <a href="javascript:;" class="navbar-brand">
-                       <img src="./src/images/logo.png" alt="">
-                   </a>
-               </div>
-               <div class="search-content">
-                   <span class="icon-sousuo1 iconfont icon"></span>
-                   <input type="text" placeholder="输入关键词搜索商家、服务">
-                   <span class="service">搜服务</span>
-               </div>
-               <div class="erwei">
-                   <div class="icon"></div>
-                   <img src="./src/images/daowayApp.png" alt="">
-               </div>
-           </div>
+            <div class="search-wrap">
+                <div class="nav-bar">
+                    <a href="javascript:;" class="navbar-brand">
+                        <img src="./src/images/logo.png" alt="">
+                    </a>
+                </div>
+                <div class="search-content">
+                    <span class="icon-sousuo1 iconfont icon"></span>
+                    <input type="text" placeholder="输入关键词搜索商家、服务">
+                    <span class="service">搜服务</span>
+                </div>
+                <div class="erwei">
+                    <div class="icon"></div>
+                    <img src="./src/images/daowayApp.png" alt="">
+                </div>
+            </div>
         </div>
     </header>
-    <div class="carousel">
-        <div class="flicker">
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide" >
-                        <div class="img"></div>
+    <div class="provider">
+        <p class="service-text">服务商</p>
+        <div class="provider-content">
+            <!--<div class="row">
+                <a href="javascript:;">
+                    <div class="col">
+                        <img src='http://img.daoway.cn/img/2017/01/20/c3a2490e-04fc-43de-9a05-8a62dce47f57_thumb.jpg' alt="">
+                        <div class="desc">
+                            <img src="./src/images/home1.png" alt="">
+                            <p>宜生到家</p>
+                        </div>
+                        <div class="detail">
+                            <div class="dan">
+                                已接单<span>8888</span>单
+                            </div>
+                            <div class="good-rep">
+                                好评<span>99</span>%
+                            </div>
+                        </div>
                     </div>
-                    <div class="swiper-slide">
-                        <div class="img2"></div>
-                    </div>
-                </div>
-                <div class="swiper-pagination"></div>
-            </div>
-            <div class="banner-nav">
-               <div class="banner-wrap">
-                 <!--nav 模版数据-->
-               </div>
+                </a>
+            </div>-->
+            <!--service-provider 模版数据-->
+        </div>
+        <div class="jiameng">
+            <img src="./src/images/tuijianfuwushang.jpg" alt="">
+            <div class="daowei-app">
+                <img src="./src/images/daowayApp.png" alt="">
             </div>
         </div>
-    </div>
-    <div class="box-wrap">
-        <!--service 模版数据-->
     </div>
     <div class="baozhang">
         <div class="service-b">
@@ -183,6 +191,6 @@
     </div>
 </div>
 </body>
-<script src="./src/js/index.js"></script>
+<script src="./src/js/service-provider.js"></script>
 <script src="./src/js/header.js"></script>
 </html>

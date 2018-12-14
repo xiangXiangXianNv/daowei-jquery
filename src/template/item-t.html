@@ -1,0 +1,13 @@
+{{each item as value index}}
+<a href="javascript:;">
+    <div class="tab">
+        <img src={{value.imgUrl}} alt="">
+        <div class="spm">
+            <span>{{value.title}}</span>
+            <span class="ellipsis">{{value.servedes}}</span>
+            <span class="price"><i>{{value.price}}</i>元/次</span>
+            <span class="old-price">原价<i>{{value.oldPrice}}</i></span>
+        </div>
+    </div>
+</a>
+{{/each}}
