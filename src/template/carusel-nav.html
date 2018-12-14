@@ -1,0 +1,15 @@
+<ul class="banner-ul">
+    {{each nav as value i}}
+        <li class="nav-name">
+            <a href="javascript:;" class="nav-a-nor"></a>
+            <span class="title">{{value.serviceIndex}}</span>
+            <span class="icon iconfont icon-jiantouarrow487"></span>
+            <img src="" alt="" class="right">
+            <ul class="hov-content">
+                {{each value.serviceType as item index}}
+                    <li><a href="javascript:;">{{item}}</a></li>
+                {{/each}}
+            </ul>
+        </li>
+    {{/each}}
+</ul>

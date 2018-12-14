@@ -1,0 +1,43 @@
+{{each service as value index}}
+<div class="box">
+    <div class="fff">
+        <div class="servicebody">
+            <div class="navigation">
+                <div class="serviceIndex">{{value.serviceIndex}}</div>
+                <div class="serviceType">
+                    {{each value.serviceType as item index}}
+                    <a href="javascript:;">{{item}}</a>
+                    {{/each}}
+                </div>
+            </div>
+            <div class="servicetags">
+                <div class="tagsListHeader">
+                    <span class="lookMore">更多服务&gt;</span>
+                </div>
+                <div class="row">
+                    {{each value.shopList as shopItem index}}
+                    <a href="javascript:;">
+                        <div class="col">
+                            <img src={{shopItem.imgUrl}} alt="">
+                            <div class="serviceName ellipsis">{{shopItem.serviceName}}</div>
+                            <div class="desc">{{shopItem.description}}
+                            </div>
+                            <div class="price">
+                                <span class="price-text">{{shopItem.price}}</span>
+                                <span class="price-desc">元/小时</span>
+                                <span class="price-btn">查看详情</span>
+                            </div>
+                        </div>
+                    </a>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+        <div class="fws">
+            <a href="javascript">云家政</a>
+            <a href="javascript">云家政</a>
+            <a href="javascript">云家政</a>
+        </div>
+    </div>
+</div>
+{{/each}}
