@@ -12,7 +12,7 @@
                 <img src="src/images/red_star.png" alt="">
             </span>
             <span class="time">
-                {{comment.createtime}}
+               {{comment.createtime | dateFormat: 'yyyy-MM-dd hh:mm:ss'}}
             </span>
         </li>
         <li class="commentdetail">{{comment.comment}}</li>

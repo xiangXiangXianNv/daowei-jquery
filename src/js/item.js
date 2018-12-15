@@ -1,7 +1,7 @@
 $(function () {
-    /*
-    {{comment.createtime | dateFormat: 'yyyy-MM-dd hh:mm:ss'}}
-    template.helper('dateFormat', function (date, format) {
+
+    //{{comment.createtime | dateFormat: 'yyyy-MM-dd hh:mm:ss'}}
+   /* template.helper('dateFormat', function (date, format) {
         date = new Date(date);
         var map = {
             "M": date.getMonth() + 1, //月份
@@ -61,30 +61,85 @@ $(function () {
                 color:"black",
             });
         });
-        //给每个li添加事件
-        const start = page===1?(page-1)*10:(page-1)*10;
+       /* const start = (page-1)*10;
         const newArr = arr.slice(start,page*10);
-        const commentObj = {comments:newArr};
+        const commentObj = {comments:newArr};*/
+        const commentObj = {comments:arr};
         $.get('src/template/comments.html',function (data) {
             const render = template.compile(data);
             const html = render(commentObj);
             $('.comment-wrap .title').after(html);
+            $('.comments').css({
+                display:"none"
+            });
+            $('.comments').each(function (index,ele) {
+                if(index<10){
+                    $($('.comments')[index]).css({
+                        display:'block',
+                    })
+                }
+            })
         });
-        //const offset = $('comment-wrap').offset().top;
         $('.page ul .num').click(function (e) {
-            $(window).scrollTop(700);
-            $('.page ul .num').removeClass('active');
+            //$(window).scrollTop(700);
+            /*$('.page ul .num').removeClass('active');
             page = +e.target.innerHTML;
             $('.comments').hide();
-            const start = page===1?(page-1)*10:(page-1)*10;
+            const start = (page-1)*10;
             const newArr = arr.slice(start,page*10);
             const commentObj = {comments:newArr};
-            $.get('src/template/comments.html',function (data) {
-                const render = template.compile(data);
-                const html = render(commentObj);
-                $('.comment-wrap .title').after(html);
+            const html = template('comments',commentObj);
+            $('.comment-wrap .title').after(html);
+            $(e.target).addClass('active');*/
+            $('.page ul .num').removeClass('active');
+            page = +e.target.innerHTML;
+            $('.comments').css({
+                display:"none"
             });
-            $(e.target).addClass('active')
+            $('.comments').each(function (index,ele) {
+                if(index>=(page-1)*10&&index<(page*10)){
+                    $(ele).css({
+                        display:'block',
+                    })
+                }
+
+            });
+            $(e.target).addClass('active');
         });
-    })
-})
+    });
+    $('.up').click(function (e) {
+        var page = +$('.page ul .active').html();
+        if(page!=1){
+            page = page-1;
+            toggle('prev',page);
+        }
+    });
+    $('.down').click(function (e) {
+        var page = +$('.page ul .active').html();
+        if(page<9){
+            page = page+1;
+            toggle('next',page);
+        }
+    });
+    function toggle(method,page) {
+        $('.comments').css({
+            display:"none"
+        });
+        $('.comments').each(function (index,ele) {
+            if(index>=(page-1)*10&&index<(page*10)){
+                $(ele).css({
+                    display:'block',
+                })
+            }
+
+        });
+        const current = $('.page ul .active');
+        $('.page ul .num').removeClass('active');
+        if(method==='prev'){
+            $(current).prev().addClass('active');
+        }else{
+            $(current).next().addClass('active');
+        }
+
+    }
+});

@@ -302,6 +302,33 @@
     })
 
 </script>
+<script id="comments" type="text/html">
+    {{each comments as comment index}}
+    <div class="comments">
+        <img src={{comment.iconUrl}} alt="">
+        <ul>
+            <li class="username">{{comment.nick}}</li>
+            <li class="star">
+            <span>
+                <img src="src/images/red_star.png" alt="">
+                <img src="src/images/red_star.png" alt="">
+                <img src="src/images/red_star.png" alt="">
+                <img src="src/images/red_star.png" alt="">
+                <img src="src/images/red_star.png" alt="">
+            </span>
+                <span class="time">
+                {{comment.createtime}}
+            </span>
+            </li>
+            <li class="commentdetail">{{comment.comment}}</li>
+            <li>
+                <img src="src/images/position.jpg" alt="">
+                {{comment.city}}  {{comment.area}}
+            </li>
+        </ul>
+    </div>
+    {{/each}}
+</script>
 <script src="./src/js/item.js"></script>
 <script src="./src/js/header.js"></script>
 </html>
